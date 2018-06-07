@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.gamer.modulocontrolrecibo.Api.ControlService;
 import com.example.gamer.modulocontrolrecibo.modelo.Persona;
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                     ArrayList<Persona> listapersona = personaRespuesta.getData();
                     for(int i= 0 ; i< 5;i++){
                         Persona p= listapersona.get(i);
+                        Toast.makeText(getApplicationContext(), "Prueba"+p.getApe_nom(), Toast.LENGTH_SHORT).show();
+
                         Log.i("TAG","Persona"+p.getApe_nom()+p.getId_concepto());
                     }
                 }
